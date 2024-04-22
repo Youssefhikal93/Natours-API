@@ -14,9 +14,6 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD,
 );
 
-// const DB =
-//   "mongodb+srv://youssefhikal:5579462yY@cluster0.1zhyw3r.mongodb.net/Natours2";
-
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
