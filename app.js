@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
+const cors = require("cors")
 // const cookieParser = require("cookie-parser");
 
 const tourRouter = require("./routes/tourRoute");
@@ -22,6 +23,16 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
 //1) GLOBAL MIddlewares//-----------------
+//allow control allow origin from any web or sub domain to ur API
+app.use(cors())
+// Access-Control-Allow-Origin *
+// api.natours.com, front-end natours.com
+// app.use(cors({
+//   origin: 'https://www.natours.com'
+// }))
+
+app.options('*', cors());
+// app.options('/api/v1/tours/:id', cors());
 
 //Secuirty HTTP headers
 app.use(helmet());

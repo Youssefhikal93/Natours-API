@@ -15,6 +15,7 @@
     "bcryptjs": "^2.4.3",
     "clean": "^4.0.2",
     "cookie": "^0.6.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
